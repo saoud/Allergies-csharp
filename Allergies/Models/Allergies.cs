@@ -10,13 +10,12 @@ namespace Allergies.Models
       public List<string> CheckAllergies(int score)
       {
         List<string> allergiesList = new List<string> {};
-        if (score == 1)
+        foreach(KeyValuePair<string,int> entry in Scores)
         {
-          allergiesList.Add("eggs");
-        }
-        else
-        {
-          allergiesList.Add("peanuts");
+          if (score == entry.Value)
+          {
+            allergiesList.Add(entry.Key);
+          }
         }
         return allergiesList;
       }
