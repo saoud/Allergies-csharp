@@ -9,7 +9,16 @@ namespace Allergies.Models
 
       public List<string> CheckAllergies(int score)
       {
-          return new List<string> {};
+        List<string> allergiesList = new List<string> {};
+        if (score == 1)
+        {
+          allergiesList.Add("eggs");
+        }
+        else
+        {
+          allergiesList.Add("peanuts");
+        }
+        return allergiesList;
       }
     }
 }
