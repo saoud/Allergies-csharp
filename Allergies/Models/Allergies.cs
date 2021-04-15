@@ -6,19 +6,29 @@ namespace Allergies.Models
 {
     public class AllergyScore
     {
-      public Dictionary<string, int> Scores = new Dictionary<string, int>() {{"eggs",1}, {"peanuts",2}, {"shellfish",4}, {"strawberries",8}, {"tomatoes",16}, {"chocolate",32}, {"pollen",64}, {"cats",128}};
+      public string[] Allergens = {"eggs","peanuts","shellfish","strawberries","tomatoes","chocolate","pollen","cats"};
 
-      public List<string> CheckAllergies(int score)
+      public List<string> CheckAllergies(int userSum)
       {
         List<string> allergiesList = new List<string> {};
-        foreach(KeyValuePair<string,int> entry in Scores)
+        string sumInBinary = Convert.ToString(userSum, 2);
+        string reverseBinary = reverseString(sumInBinary);
+
+        for (int i=0; i < reverseBinary.Length; i++)
         {
-          if (score == entry.Value)
+          if (reverseBinary[i] == '1')
           {
-            allergiesList.Add(entry.Key);
+            allergiesList.Add(Allergens[i]);
           }
         }
         return allergiesList;
+      }
+
+      private static string reverseString(string strToReverse)
+      {
+        char[] stringToArray = strToReverse.ToCharArray();
+        Array.Reverse(stringToArray);
+        return String.Join("",stringToArray);
       }
     }
 }
