@@ -32,5 +32,12 @@ namespace Allergies.Tests
 			AllergyScore testAllergyScore = new AllergyScore();
 			CollectionAssert.AreEqual(new List<string> {"eggs","peanuts"}, testAllergyScore.CheckAllergies(3));
 		}	
+
+		[TestMethod]
+		public void CheckAllergies_IfInputIs25_eggsstrawberriestomatoes()
+		{
+			AllergyScore testAllergyScore = new AllergyScore();
+			CollectionAssert.AreEqual(new List<string> {"eggs","strawberries","tomatoes"}, testAllergyScore.CheckAllergies(25));
+		}	
 	}
 }
