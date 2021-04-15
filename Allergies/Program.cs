@@ -17,6 +17,20 @@ namespace Allergies
       {
         Console.WriteLine(allergen);
       }
+      Continue();
+    }
+    private static void Continue()
+    {
+      Console.Write("Would you like to check a different input? Type [y] if yes, [n] if you would like to exit: ");
+      string userContinue = Console.ReadLine();
+      if (userContinue == "y" || userContinue == "Y")
+      {
+        Main();
+      }
+      else
+      {
+        Console.WriteLine("Goodbye.");
+      }
     }
   }
 }
