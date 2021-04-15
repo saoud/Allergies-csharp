@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Allergies.Models;
+using System.Linq;
 
 namespace Allergies.Tests
 {
