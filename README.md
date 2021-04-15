@@ -33,9 +33,14 @@ _Build a website that uses a method that is called on someone's score - i.e. the
 ## Setup/Installation Requirements
 * Make sure the necessary technologies above have been installed to your machine.
 * Clone this repository to your machine
-* In the terminal, navigate to `Allergies-csharp/Allergies"
+* In the terminal, navigate to `Allergies-csharp/Allergies`
 * Run command `$ dotnet build` to compile code
 * Run `$ dotnet run` to run this program on the command line.
 
+To run tests with MS Test:
+* Navigate to `Allergies/Allergies.Tests/`
+* Run `$ dotnet restore`
+* Run `$ dotnet test`
+
 ## Known bugs
-* None known at this time
+* Currently there is an unhandled exception for if the user enters an allergy score >255. Will fix later if I have time.
