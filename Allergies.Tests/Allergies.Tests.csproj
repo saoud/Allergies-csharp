@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TDDcsharp\TDDcsharp.csproj" />  
+    <ProjectReference Include="..\Allergies\Allergies.csproj" />  
   </ItemGroup>
 
 </Project>
