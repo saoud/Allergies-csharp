@@ -5,6 +5,8 @@
 This project was completed for Epicodus as a part of the part-time full-stack developer program to demonstrate understanding of Test Driven Development using C#.
 
 ## Assignment
+**from the [Epicodus curriculum](https://www.learnhowtoprogram.com/c-and-net-part-time-c-and-react-track/test-driven-development-with-c/triangle-tracker-palindromes-allergies)**
+
 _Here's something a bit trickier and please only attempt this if you have completed the previous projects and had them checked by an instructor. An allergy score is a single number that tells what someone is allergic to. The scores for each allergen are:_
 ```
 allergen     score
